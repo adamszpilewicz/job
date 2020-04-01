@@ -1,0 +1,122 @@
+[
+    {
+      "description": "obligor_id",
+      "mode": "NULLABLE",
+      "name": "obligor_id",
+      "type": "STRING"
+    },
+    {
+      "description": "gbv of the particular pk_credit_account_id",
+      "mode": "NULLABLE",
+      "name": "gbv_per_account",
+      "type": "FLOAT"
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "temenos_account_id",
+      "type": "STRING"
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "product_id",
+      "type": "STRING"
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "gbv_total_obligor",
+      "type": "FLOAT"
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "share_gbv_contract_in_total",
+      "type": "FLOAT"
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "collateral_type_id",
+      "type": "STRING"
+    },
+    {
+      "description": "value of AION mortgage on the property",
+      "mode": "NULLABLE",
+      "name": "value_of_mortgage",
+      "type": "FLOAT"
+    },
+    {
+      "description": "value of underlying property from the table dim_credit_collateral_valuation with the valuation_status='active'",
+      "mode": "NULLABLE",
+      "name": "value_of_property",
+      "type": "FLOAT"
+    },
+    {
+      "description": "value of the allocated collateral on the account_id level, as the same obligor can have more than one account_id; allocation key bases on GBV share of the particular account_id in the total GBV of all account_ids of the obligor",
+      "mode": "NULLABLE",
+      "name": "value_of_allocated_mortgage",
+      "type": "FLOAT"
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "product_variant_code",
+      "type": "STRING"
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "T_24",
+      "type": "STRING"
+      },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "occupied_by_owner",
+      "type": "STRING"
+    
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "repayment_capacity",
+      "type": "STRING"
+   
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "linked_credit_quality",
+      "type": "STRING"
+   
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "is_eligible_collateral",
+      "type": "STRING"
+    
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "rwa_class_pre",
+      "type": "STRING"
+    
+    },
+    {
+      "description": "",
+      "mode": "NULLABLE",
+      "name": "pk_snapshot_date",
+      "type": "DATE"
+    }
+]
+
+
+bq load \
+--autodetect \
+--source_format=CSV \
+`dl_layer3_cr.tmp_collateral_allocation` \
+/Users/adamszpilewicz/Documents/gitlab_connection/reporting_modules/resulaaaaaa.csv
